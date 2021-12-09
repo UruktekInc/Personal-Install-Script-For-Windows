@@ -1,0 +1,4 @@
+steam
+chrome
+firefox
+vlc

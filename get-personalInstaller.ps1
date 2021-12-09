@@ -47,4 +47,4 @@ else {
 
 #Installing windows update from pswindowsupdate module
 Write-Host "Everything within your list is installed. Now running windows updates"
-Get-WindowsUpdate | Install-WindowsUpdate
+Install-WindowsUpdate -Confirm:$false

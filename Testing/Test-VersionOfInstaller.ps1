@@ -1,8 +1,6 @@
 #THIS IS THE TEST VERSION WHICH MAY OR MAY NOT BE BROKEN
 #USE AT YOUR OWN RISK
 
-#Checking for choco
-$isChocoInstalled = choco -v 
 #This installs nuget so that the install-mod will not prompt for it
 Install-PackageProvider NuGet -Force > $null
 #this installs pswindowsupdate to install windows update from ps

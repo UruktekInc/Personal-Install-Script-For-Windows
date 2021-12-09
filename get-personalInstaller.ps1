@@ -1,6 +1,6 @@
 #Checking for choco
 
-$isChocoInstalled = powershell choco -v
+$isChocoInstalled = choco -v
 
 $ProgramsToInstall = "steam","GoogleChrome","FireFox","origin","vscode","vlc","powertoys","microsoft-windows-terminal","ccleaner","7zip","filezilla","git","github-desktop","battle.net"
 

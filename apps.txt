@@ -1,5 +1,5 @@
 Steam
-GooleChrome
+GoogleChrome
 FireFox
 origin
 vscode

@@ -2,11 +2,13 @@
 #USE AT YOUR OWN RISK
 
 #Checking for choco
-$isChocoInstalled = choco -v
+$isChocoInstalled = choco -v 
 #This installs nuget so that the install-mod will not prompt for it
-Install-PackageProvider NuGet -Force
+#testing Sending output to null to see if this will be supressed and still work
+Install-PackageProvider NuGet -Force > $null
 #this installs pswindowsupdate to install windows update from ps
-Install-Module pswindowsupdate -Confirm:$false -Force
+#testing Sending output to null to see if this will be supressed and still work
+Install-Module pswindowsupdate -Confirm:$false -Force > $null
 
 #TODO: Use gc to pull from app.txt of the list of file to install rather than using a hard coded arraylist
 #$ProgramsToInstall = "steam","GoogleChrome","FireFox","origin","vscode","vlc","powertoys","microsoft-windows-terminal","ccleaner","7zip","filezilla","git","github-desktop"

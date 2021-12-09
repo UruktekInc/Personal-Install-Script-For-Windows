@@ -11,4 +11,11 @@ else {
 }
 #to install without prompt pass -y or enable it globally
 
-$ProgramsToInstall = "steam","GoogleChrome","FireFox","origin","vscode","vlc","powertoys","microsoft-windows-terminal","ccleaner","7zip","filezilla","git"
+#TODO: above is commented for the time being during testing please remove all the comments from the above code.
+
+$ProgramsToInstall = "steam","GoogleChrome","FireFox","origin","vscode","vlc","powertoys","microsoft-windows-terminal","ccleaner","7zip","filezilla","git","github-desktop","battle.net"
+
+
+foreach ($app in $ProgramsToInstall) {
+    choco install $app -y
+}

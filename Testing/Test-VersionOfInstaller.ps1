@@ -23,7 +23,6 @@ try {
 catch [System.Management.Automation.CommandNotFoundException]{
     Write-host "Choco package manager is not installed."
     Write-host "Choco will now be installed...."
-    #set-ExecutionPolicy Bypass -Scope Process -Force > $null #execution before running should be changed however this is suggested by the dev. Hush output.
     Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     Clear-Host
     Write-Host "Install apps from the app file......."

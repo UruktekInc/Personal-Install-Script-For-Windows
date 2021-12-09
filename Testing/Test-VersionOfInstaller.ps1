@@ -17,7 +17,7 @@ if (-not ($isChocoInstalled)) {
     set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     foreach ($app in $ProgramsToInstall) {
         #TODO: Add supressed output to screen EG "installing X..."
-        choco install $app -y
+        choco install $app -r -y
     }
 }
 else {

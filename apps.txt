@@ -1,0 +1,13 @@
+Steam
+GooleChrome
+FireFox
+origin
+vscode
+vlc
+powertoys
+microsoft-windows-terminal
+ccleaner
+7zip
+filezilla
+git
+github-desktop

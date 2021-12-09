@@ -4,6 +4,7 @@
 #Checking for choco
 $isChocoInstalled = choco -v 
 #This installs nuget so that the install-mod will not prompt for it
+# add a message of some kind informing the end user of what's being done at this point
 Install-PackageProvider NuGet -Force > $null
 #this installs pswindowsupdate to install windows update from ps
 Install-Module pswindowsupdate -Confirm:$false -Force > $null

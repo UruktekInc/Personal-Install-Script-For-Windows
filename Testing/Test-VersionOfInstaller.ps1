@@ -4,10 +4,8 @@
 #Checking for choco
 $isChocoInstalled = choco -v 
 #This installs nuget so that the install-mod will not prompt for it
-#testing Sending output to null to see if this will be supressed and still work
 Install-PackageProvider NuGet -Force > $null
 #this installs pswindowsupdate to install windows update from ps
-#testing Sending output to null to see if this will be supressed and still work
 Install-Module pswindowsupdate -Confirm:$false -Force > $null
 
 #TODO: Use gc to pull from app.txt of the list of file to install rather than using a hard coded arraylist
@@ -30,6 +28,16 @@ else {
     }
 }
 
+
 #Installing windows update from pswindowsupdate module
 Write-Host "Everything within your list is installed. Now running windows updates"
-Install-WindowsUpdate -Confirm:$false
+Write-host "Please wait as this may take some time...."
+Install-WindowsUpdate -Confirm:$false > $null
+
+
+try {
+    chocolo -v > $null
+}
+catch [System.Management.Automation.CommandNotFoundException]{
+    "The command doesn't exist"
+}

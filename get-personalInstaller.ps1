@@ -16,20 +16,7 @@ Install-Module pswindowsupdate -Confirm:$false -Force
 
 
 #Perhaps this should be inside an txt file or an ini for simplicity?
-$ProgramsToInstall =
-"steam"
-,"GoogleChrome"
-,"FireFox"
-,"origin"
-,"vscode"
-,"vlc"
-,"powertoys"
-,"microsoft-windows-terminal"
-,"ccleaner"
-,"7zip"
-,"filezilla"
-,"git"
-,"github-desktop"
+$ProgramsToInstall ="steam","GoogleChrome","FireFox","origin","vscode","vlc","powertoys","microsoft-windows-terminal","ccleaner","7zip","filezilla","git","github-desktop"
 
 if (-not ($isChocoInstalled)) {
     Write-host "Choco package manager is not installed or can not be found"

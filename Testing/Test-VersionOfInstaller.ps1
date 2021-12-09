@@ -15,7 +15,7 @@ try {
     Write-Host "Install apps from the app file......."
     foreach ($app in $ProgramsToInstall) {
         choco install $app -r -y
-        $Host.ui.RawUI.WindowTitle = "Installing " + $app + "...."
+        $Host.ui.RawUI.WindowTitle = "Installing " + $app.ToUpper() + "...."
         Clear-Host
     }
     Clear-Host

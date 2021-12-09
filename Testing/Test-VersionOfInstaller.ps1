@@ -29,7 +29,8 @@ catch [System.Management.Automation.CommandNotFoundException]{
     Write-Host "Install apps from the app file......."
     foreach ($app in $ProgramsToInstall) {
         Clear-Host
-        $Host.ui.RawUI.WindowTitle = "Installing " + $app + "...."
+        $Host.ui.RawUI.WindowTitle = "Installing " + $app.ToUpper() + "...."
+        
         choco install $app -r -y
     }
 

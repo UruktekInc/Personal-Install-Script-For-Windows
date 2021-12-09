@@ -30,7 +30,6 @@ catch [System.Management.Automation.CommandNotFoundException]{
     foreach ($app in $ProgramsToInstall) {
         Clear-Host
         $Host.ui.RawUI.WindowTitle = "Installing " + $app.ToUpper() + "...."
-        
         choco install $app -r -y
     }
 
